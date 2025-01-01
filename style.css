@@ -1,0 +1,451 @@
+@font-face {
+  font-family: neo;
+  src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: neo;
+  color: #ffffff;
+}
+
+/* Base Typography */
+html {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #ffffff;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+}
+#page1 {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #222222;
+  position: relative;
+  padding: 0 2vw;
+}
+nav {
+  padding: 2vw 0vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-part2 ,.cta {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.nav-part2 h4 ,.cta h4{
+  padding: 10px 20px;
+  border: 1px solid #613690;
+  border-radius: 50px;
+  color: #ffffffec;
+  font-size: 18px;
+  position: relative;
+  transition: all ease 0.4s;
+  overflow: hidden;
+}
+.nav-part2 h4:after ,.cta h4:after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #613690;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50px;
+  transition: all ease 0.4s;
+}
+.nav-part2 h4:hover::after ,.cta h4:hover::after{
+  bottom: 0;
+}
+.nav-part2 h4 a ,.cta h4 a {
+  color: #ffffffec;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+  font-weight: 400;
+  color: #ffffffec;
+  font-size: 18px;
+}
+.nav-part2 h4:hover a ,.cta h4:hover a{
+  color: #fff;
+}
+#center {
+  height: 65vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #613690;
+  padding-bottom: 9vh;
+}
+#left h3 {
+  width: 28vw;
+  font-size: 2.5vw;
+  line-height: 2.8vw;
+  font-family: neo;
+  margin-bottom: 50px;
+}
+#center h1 {
+  font-size: 10vw;
+  line-height: 8vw;
+  text-align: right;
+}
+#page1 video {
+  border-radius: 30px;
+  margin-top: 4vw;
+  position: relative;
+  width: 100%;
+  transition: 0.5s;
+}
+#page1 video:hover {
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+#hero-shape {
+  width: 55vw;
+  height: 37vw;
+  position: absolute;
+  right: 0;
+  top: 75vh;
+}
+#hero-1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: blur(20px);
+  background: linear-gradient(#613690, #894dc8);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+#hero-2 {
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  filter: blur(15px);
+  background: linear-gradient(#613690, #8449c3);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  animation-name: anime2;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#hero-3 {
+  width: 30vw;
+  height: 30vw;
+  position: absolute;
+  filter: blur(25px);
+  background: linear-gradient(#613690, #7c45b6);
+  border-radius: 50%;
+  animation-name: anime1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes anime1 {
+  from {
+    transform: translate(55%, -3%);
+  }
+
+  to {
+    transform: translate(0%, 10%);
+  }
+}
+@keyframes anime2 {
+  from {
+    transform: translate(5%, -5%);
+  }
+
+  to {
+    transform: translate(-20%, 30%);
+  }
+}
+.btn-shine {
+  color: #00000000;
+  background: linear-gradient(to right, #ffffff 0%, #613690 10%, #ffffff 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+#page2 {
+  position: relative;
+  padding-top: 8vw;
+  width: 100%;
+  height: 120vh;
+}
+#moving-line {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+.con {
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: move;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.con h1 {
+  font-family: sun-mediu;
+  font-size: 9vw;
+  display: inline-block;
+ text-transform: uppercase;
+}
+#gola {
+  height: 5vw;
+  width: 5vw;
+  border-radius: 50%;
+  background-color: #613690;
+  display: inline-block;
+  margin: 1vw 2vw;
+}
+#page2bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4vw 6vw;
+  height: 80vh;
+  gap: 20px;
+}
+#part1 {
+  width: 63%;
+}
+#page2bottom h1 {
+  font-size: 4.2vw;
+  z-index: 9;
+  position: relative;
+  font-family: sun-mediu;
+  font-weight: 900;
+  line-height: 4vw;
+}
+#part2 {
+  padding-top: 41vh;
+  padding-right: 1vw;
+  width: 22%;
+}
+#part2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  margin-bottom: 3vw;
+}
+#circle {
+  position: absolute;
+  width: 32vw;
+  height: 32vw;
+  top: 61%;
+  left: 27%;
+  border-radius: 50%;
+  background-color: #8a4dca94;
+  filter: blur(10px);
+}
+#circle1 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #7843b0cc;
+  filter: blur(10px);
+  animation-name: circle1;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+#circle2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #653896;
+  filter: blur(50px);
+  animation-name: circle2;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.fadeInLeft {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 15.133, 0, 1);
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes circle1 {
+  0% {
+    transform: translate(-5%, 10%) skew(0deg);
+  }
+  100% {
+    transform: translate(5%, -6%) skew(-10deg);
+  }
+}
+@keyframes circle2 {
+  0% {
+    transform: translate(-5%, 10%);
+  }
+  100% {
+    transform: translate(5%, -6%);
+  }
+}
+#page3 {
+  min-height: 100vh;
+}
+#moving-line::-webkit-scrollbar {
+  display: none;
+}
+#sec {
+  display: flex;
+  gap: 0.5vw;
+  padding: 3vw 2vw;
+  align-items: center;
+}
+#gol {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #613690;
+}
+#elem-con {
+  padding: 1vw 0;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+.elem {
+  height: 6vw;
+  width: 100%;
+  padding: 1vw 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(207, 201, 201, 0.373);
+  overflow: hidden;
+}
+#overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -100%;
+  background-color: #613690;
+  transition: all ease 0.2s;
+  z-index: 2;
+}
+#proj {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+#proj h2 {
+  position: relative;
+  z-index: 10;
+  font-family: sun-mediu;
+  font-weight: bolder;
+  font-size: 3vw;
+}
+#proj div {
+  text-align: right;
+  position: relative;
+  z-index: 10;
+}
+#proj div h4 {
+  font-weight: 300;
+}
+#proj div p {
+  color: rgb(173, 167, 167);
+}
+.elem:hover #overlay {
+  top: 0%;
+}
+.cta{
+  margin-top: 20px;
+}
+h4:has(.work){
+  background-color: #613690;
+}
+h4:has(.work):hover{
+  background-color: #000;
+}
+#but {
+  padding: 3vw 2vw;
+}
+#navbut {
+  display: flex;
+}
+#navbut h4 {
+  border: 1px solid #613690;
+  margin: 0 7px;
+  border-radius: 50px;
+  padding: 13px 21px;
+  position: relative;
+  overflow: hidden;
+  transition: all ease 0.4s;
+}
+#navbut a {
+  text-decoration: none;
+  color: #ffffff;
+  z-index: 9;
+  position: relative;
+}
+#navbut h4::after {
+  content: "";
+  background-color: #613690;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+#navbut h4:hover a {
+  color: white;
+}
+#navbut h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
